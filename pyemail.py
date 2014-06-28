@@ -6,13 +6,13 @@ import os
 
 from zabbixalert.utils import get_options, get_args
 from zabbixalert.exceptions import NotifyError
-from zabbixalert.notifier.pyemail import Email
+from zabbixalert.notifier.pyemail import EmailNotifier
 
 __config_section__ = 'email'
 __requisit_opts__ = ['smtp_host', 'user']
 
 def notify(options, to, subject, message):
-    notifier = Email(options)
+    notifier = EmailNotifier(options)
     ret = notifier.notify(to, subject, message) 
     return ret
     

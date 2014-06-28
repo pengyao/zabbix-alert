@@ -3,7 +3,7 @@ from email import  MIMEText
 from email.Header import Header
 from socket import timeout
 
-class Email:
+class EmailNotifier:
     def __init__(self, options):
         self.options = options
          
