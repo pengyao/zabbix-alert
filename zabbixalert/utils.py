@@ -3,6 +3,7 @@ Utils
 '''
 
 import yaml
+import os
 import argparse
 from zabbixalert.exceptions import ConfigError, OptionReq
 
@@ -65,3 +66,12 @@ def get_args():
     subject = args.subject
     message = args.message
     return (to, subject, message)
+
+def notify(config_file, config_section, requisit_opts, notifier):
+    '''
+    Notify wrapper
+    '''
+    to, subject, message = get_args()
+    options = get_options(config_file, config_section, requisit_opts)
+    ret = notifier(options).notify(to, subject, message)
+    return ret
