@@ -1,0 +1,5 @@
+email:
+  smtp_host: mail.example.com
+  user: test@example.com
+  alias: zabbix-alert
+  password: mypassword
