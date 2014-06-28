@@ -2,11 +2,12 @@ import smtplib
 from email import  MIMEText
 from email.Header import Header
 from socket import timeout
+from zabbixalert.notifier import BaseNotifier
 
-class EmailNotifier:
-    def __init__(self, options):
-        self.options = options
-         
+class EmailNotifier(BaseNotifier):
+    '''
+    Email Notifier
+    '''
     def notify(self, to, subject, message):
         '''
         Email notify
