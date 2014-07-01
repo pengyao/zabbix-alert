@@ -7,6 +7,7 @@ Features
 ##################
 
 Support send notification to:
+
 * Email
 * `Redmine <http://www.redmine.org/>`_ Issue
 
@@ -24,7 +25,7 @@ Send notification by email
 
   pip install -r requirements_pyemail.txt
 
-* Config config.yaml, like:
+* Config *config.yaml*, like:
 
 .. code-block:: yaml
 
@@ -52,7 +53,7 @@ Send notification to Redmine issue for track problem.
 
   pip install -r requirements_pyredmine.txt
 
-* Config config.yaml, like:
+* Config *config.yaml*, like:
 
 .. code-block:: yaml
 
