@@ -67,6 +67,6 @@ Send notification to Redmine issue for track problem.
 
 .. code-block:: bash
 
-  ./pyredmine "1" "this is subject" "this is message"
+  ./pyredmine.py "1" "this is subject" "this is message"
 
 *1* is redmine user id to assign
