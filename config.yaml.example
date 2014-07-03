@@ -9,3 +9,11 @@ redmine:
   user: pengyao
   key: 1f2u3c4k5g6f7w
   project: zabbix-alert
+
+twilio:
+  from: '+1234567'
+  sid: 'Your twilio sid'
+  token: 'Your twilio token'
+  call:
+    voice: alice
+    language: zh-CN
