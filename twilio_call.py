@@ -6,7 +6,7 @@ from zabbixalert.notifier.twilio_call import TwilioCallNotifier
 from zabbixalert.exceptions import NotifyError
 from zabbixalert.utils import notify
 
-__config_section__ = 'twilio'
+__config_section__ = 'twilio_call'
 __requisit_opts__ = ['from', 'sid', 'token']
 notifier = TwilioCallNotifier
 

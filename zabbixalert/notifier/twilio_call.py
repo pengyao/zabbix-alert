@@ -13,10 +13,9 @@ class TwilioCallNotifier(BaseNotifier):
         '''
         Make Twiml Say XML
         '''
-        call = self.options.get('call', {})
-        voice = call.get('voice', 'alice')
-        language = call.get('language', 'en-US')
-        loop = call.get('loop', 1)
+        voice = self.options.get('voice', 'alice')
+        language = self.options.get('language', 'en-US')
+        loop = self.options.get('loop', 1)
         say = twiml.Say(message, voice=voice, language=language, loop=loop)
         return say.toxml()
 
