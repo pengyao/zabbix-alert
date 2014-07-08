@@ -16,8 +16,9 @@ class TwilioCallNotifier(BaseNotifier):
         voice = self.options.get('voice', 'alice')
         language = self.options.get('language', 'en-US')
         loop = self.options.get('loop', 1)
-        say = twiml.Say(message, voice=voice, language=language, loop=loop)
-        return say.toxml()
+        response = twiml.Response()
+        response.addSay(message, voice=voice, language=language, loop=loop)
+        return response.toxml()
 
     def notify(self, to, subject, message):
         '''
